@@ -63,21 +63,46 @@ class Vehiculo {
 
 //      ABSTRACCIÓN
 
-        Coche coche = new Coche();
-        coche.velocidadMaxima;
+       Coche coche = new Coche();
+        coche.velocidadMaxima = 14;
+        coche.matricula="ABC";
+            System.out.println(coche.testMatricula());
+            System.out.println(coche.getSonido());
 
-}
-
-    class Vehiculo {
+} }
+    abstract class Vehiculo {
          int velocidadMaxima;
          String matricula;
+         String sonido = "BRR";
 
+         public Vehiculo () { 
+            System.out.println("Estoy en el constructor de Vehículo");
+            
+        }
+         abstract public String getSonido(); //Abstractas en el padre (Vehiculo), debo defiinirlas en la hija (Coche) si las voy a usar
+         abstract public void setSonido(String sonido);  // Las clases padres dicen que hacer a las hijas
+
+         public boolean testMatricula (){
+            if (matricula== "AAA") {
+            
+            return true;}
+
+            return false;
+            
+         }
     }
+    class Coche extends Vehiculo { //Cuando defino las funciones abstractas del padre, dentro de la hija, ya se puede acceder al padre
+        public String getSonido() { //Debo definirlas en la hija, los abstractos en el padre
+            return ("El sonido es: " + this.sonido); 
+    } 
 
-    class Coche extends Vehiculo {}
+        public void setSonido(String sonido) {
+                this.sonido = sonido;
+            }
+        }
 
+     //Para ser incapaz de heredar a otra clase "final" (final class "Coche")
 
-}
 
 
 
