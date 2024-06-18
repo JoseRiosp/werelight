@@ -59,7 +59,7 @@ class Vehiculo {
     public string getTipo(){ // Si es un boolean se usa is (isTipo)
         return this.tipo;
     }
-}} */
+}} 
 
 //      ABSTRACCIÓN
 
@@ -103,9 +103,54 @@ class Vehiculo {
 
      //Para ser incapaz de heredar a otra clase "final" (final class "Coche")
 
+*/
+//          INTERFACES
 
 
+     Coche coche = new Coche();  
+     Moto moto = new Moto(); 
+    ejecutaAcelerar(coche); //Ejecutando una instancia de coche, la cual implementa interfaz vehiculo, la cual se usa en la función ejecutaAcelerar, que pide una instancia de vehiculo (coche)
+    
+} 
 
+//Se necesita: 
+// La interfaz: (Vehiculo)
+// La(s) clases(s) que implementan la interfaz: (Coche y moto)
+//La función que toma la interfaz: (ejecutaAcelerar (Vehiculo))
+// Así sólo tienes que llamar la función con alguna de las instancias de clase (ejecutaAcelerar (coche), etc)
+
+    public static void ejecutaAcelerar(Vehiculo vehiculo) {//Toma como valor la interfaz vehículo, así cualquiera que use vehiculo puede se uttilizado
+        vehiculo.Acelerar(40);
+    } //Esta función es inalterable, y dará diferentes resultados
+        //Metaprogramación
+
+}
+
+interface Vehiculo { //Funciona igual que la abstracción
+
+    void Acelerar (int cuantaVelocidad);
+    void Frenar (int cuantaVelocidad);
+}
+
+class Coche implements Vehiculo {
+    public void Acelerar (int cuantaVelocidad) {
+        System.out.println("Coche -> Acelerar"); //Esto es lo que imprime la función EjecutaAcelerar
+    }
+    public void Frenar (int cuantaVelocidad) {
+
+    }
+
+}
+
+class Moto implements Vehiculo {
+
+    public void Acelerar (int cuantaVelocidad) {
+        System.out.println("Moto -> Acelerar");}
+
+    public void Frenar (int cuantaVelocidad) {
+
+        }
+}
 
 
 
