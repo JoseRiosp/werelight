@@ -1,0 +1,58 @@
+/*Estilos para textos y colores*/
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+html {
+
+/*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 14px;
+font-weight: 300; /*Negrita*/
+/*<uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 900*/
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <300>;
+  font-style: normal;
+}
+
+
+.color-hexadecimal {
+    color:#805d93;
+}
+
+.color-rgb {
+    color: rgb(143, 0, 200)
+}
+
+.color-rgba { /* El a es para transparencia*/
+    color: rgba(10, 10, 10, 0.5)
+}
+
+.fondo {
+   /* background-color:#85d6eb;*/
+   color:aliceblue;
+    background-image: url("https://images.alphacoders.com/135/thumb-350-1350453.png");
+    background-position: right center;
+}
+
+/* Tamaños*/
+
+.ancho {
+    background-color:cadetblue;
+    width: 100px;
+}
+
+.alto {
+    background-color: aquamarine;
+    height: 200px;
+}
+
+.tarjeta {
+    border-style:solid;
+    border-color:rgb(150, 150, 150);
+    border-width: 2px;
+    padding:10px 20px;
+    /*padding:10px 20px 30px 40px; */
+    margin: 10px 20px;
+    /*margin:10px 20px 30px 40px; */
+}

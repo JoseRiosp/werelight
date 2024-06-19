@@ -1,0 +1,34 @@
+h1 {
+  color: red;
+}
+
+/*Esto es un comentario, como en C++ */
+p {
+  font-size: 13pt;
+  color: green;
+  color: blue; /*Se ejecuta el último puesto*/
+}
+
+#primera-noticia {
+  color: green;
+  font-size: 12pt;
+}
+
+#segunda-noticia {
+  color: blueviolet;
+}
+
+.encabezado {
+  font-size: 20pt;
+  text-transform: uppercase;
+}
+
+* .warning {
+    color: red;
+    /* El asterisco es para el por defecto de lo que no tienen alguno específico
+    Si pones algo después del asterisco, todos se pondrán de ese color*/
+}
+
+.autor, .fecha, .ubicacion {
+    text-decoration: underline;
+}
