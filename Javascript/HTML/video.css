@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.p1{
+    font-size: 10pt;
+}
+
+.p2 {
+    font-size: 9pt;
+    color:rgb(127, 200, 54);
+    text-shadow: 0 0 20px #cccccce3;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    padding: 2px;
+    text-shadow: 0 0 20px #cccccc70;
+}
+
+.header h1::first-letter {
+    color:darkgreen;
+    font-size: xx-large;
+    position: fixed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+.video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    
+}
+
+body section.main {
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor:default;
+    cursor: cell;
+}
+
+
+.newgame-word {
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 9pt;
+    padding: 6px;
+    color:rgb(176, 255, 176);
+    cursor: pointer;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+.btn-start {
+    transform: translateY(15px);
+}
+
+.button-start {
+    opacity: 0%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    box-shadow: 0 0 10px #76ef55cf;
+    font-weight: 800;
+    font-size: 9pt;
+    background: rgb(116, 176, 131);
+    padding: 6px;
+    color:rgb(5, 71, 5);
+    cursor: pointer;
+    border-color: chartreuse;
+    border-radius: 1.5cm;
+    display: flex;
+    transition: opacity 150ms;
+    transform: translateY(-22px);
+} 
+
+
+.button-start:hover {
+    opacity: 100%;
+    color: rgb(216, 255, 225);
+    background: rgb(17, 142, 46)
+}
+.button-start:hover::first-letter {
+    color:rgb(5, 71, 5);
+}
+
+.main #button-help {
+
+    position:absolute;
+    transform: translateY(150px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 7pt;
+    background: rgb(153, 210, 165);
+    padding: 6px;
+    color:rgb(35, 110, 35);
+    cursor: pointer;
+    border-color: chartreuse;
+    border-radius: 3cm;
+    border-style:dashed;
+
+}.main #button-help:hover {
+    color: rgb(216, 255, 225);
+    background: rgb(17, 142, 46);
+    
+}
+
+.tooltip{
+    position: absolute;
+    /*visibility: hidden;*/
+    opacity: 0%;
+    transform: translateY(-10px);
+    right: 100px;
+    left: 80px;
+    color: rgb(35, 110, 35);
+    background-color: rgb(153, 210, 165);
+    padding: 5px 10px;
+    width: 70px;
+    border-radius: 5px;
+    transition: opacity 150ms;
+    }
+    
+.main #button-help:hover .tooltip {
+        /*visibility: visible;*/
+        opacity: 100%;
+    }
+    
+.tooltip::before{
+        content: '';
+        border: solid 10px transparent;
+        border-left-color: rgb(17, 142, 46);
+        position: absolute;
+      transform: translateX(-8px);
+       right: 75px;
+    }

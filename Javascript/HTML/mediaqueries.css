@@ -1,0 +1,90 @@
+
+h1{
+    color:red;
+    font-size: 4rem;
+}
+
+p{
+    color:black;
+    font-size: 2rem;
+}
+
+/* media queries
+*condiciones, ej: solo para mayor que 576px
+/*Los estilos dentro de media se afectarán solo para los dispositivos que se digan
+all=todos los dispositivos (default)
+screen= solo para las pantallas
+print= impresoras*/
+
+@media (min-width: 576px) {
+ h1{
+  color: blue;
+
+ } }
+
+
+
+ @media (min-width: 700px) {
+    h1 {
+        color: green;
+    }
+ }
+
+ @media (orientation: landscape) and (min-height: 400px){
+    p{
+        color:blueviolet;
+    }
+ }
+
+ /* https://codepen.io/enxaneta/full/adLPwv */
+
+.contenedor {
+    background-color: yellow;
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    min-height: 5rem;
+    /* Eje principal - X dentro del contenedor */
+    justify-content: space-around;
+
+    /* Eje secundario - Y dentro del contenedor */
+    align-items: center;
+    flex-direction: row;
+    /*align-content: center; /*Todo el contenido*/
+
+    /* flex-direction: column; */
+    flex-wrap: wrap; /*Preservar el tamaño de los items con diferentes dimensiones*/
+}
+
+.Item {
+    background-color: rgb(114, 234, 250);
+    padding: 0.25rem;
+    border: solid 1px black;
+    font-size: 1.2rem;
+}
+
+.item2 {
+    align-self: stretch;
+}
+
+.contenedor-2 {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns:100px 5rem 100px;
+   /* grid-template-columns: repeat(3,auto);*/
+    grid-template-rows: 100px 5rem 100px;
+    grid-template-areas: 'head head head' 'main main aside' 'footer footer footer';
+}
+
+.item5 {
+    grid-column: 2 / span 2;
+   /* grid-column: 2/span 2; /* Hasta donde sea pero sólo dos columnas*/
+}
+
+
+.item7 {
+    /*grid-area: head;*/
+    grid-area: 2 / 1 / 4 / 3;
+    /*grid-area: fila inicio /columna inicio / fila fin / columna fin*/
+}
+

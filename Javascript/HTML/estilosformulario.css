@@ -1,0 +1,70 @@
+.input{
+    width:100%;
+    padding:5px 10px;
+    border: 2px solid green;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.input[type="password"] {
+    color:red;
+}
+
+.input-moderno {
+    border: none;
+    border-bottom: 1px solid rgb(214, 210, 210);
+    outline:none;
+    padding: 5px, 5px;
+    color:gray;
+}
+
+.input-moderno:focus {
+    border-bottom: 1px solid rgb(22, 22, 22);
+}
+
+.input-moderno::placeholder {
+    color: rgb(214, 210, 210);
+}
+
+.input-background {
+    background-color: aquamarine;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color:rgb(6, 158, 158);
+    box-shadow: 0 0 10px #ccccccdc;
+
+}
+
+.input-background::placeholder {
+    color: rgb(49, 226, 226);
+}
+
+.input-search {
+    padding: 10px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 10px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyi_CVTmoL1ITHFxQkfLwvj93hcsgA1Olkhg&s');
+    background-size: 20px;
+    background-repeat: no-repeat; 
+    background-position: 5px;
+    padding-left: 40px;
+}
+
+.input-search::placeholder {
+    color:rgba(144, 151, 151, 0.559);
+}
+
+textarea {
+    resize: none;
+}
+
+select {
+    width: 100px;
+    padding: 15px;
+    background-color: darkgrey;
+
+}

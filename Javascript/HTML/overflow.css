@@ -1,0 +1,34 @@
+
+.contenedor-hidden {
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.contenedor-scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    background-color: azure;
+}
+
+.contenedor-visible {
+    overflow: visible;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    background-color:burlywood;
+}
+
+.contenedor-auto {
+    overflow: auto;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    background-color:antiquewhite;
+}
+

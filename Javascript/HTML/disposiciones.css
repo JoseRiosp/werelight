@@ -2,3 +2,66 @@
 .div-1, .div-2 {
      background-color: red;
 }
+
+.span-1 {
+    background-color:aquamarine;
+    /*display       : inline POR DEFECTO en span
+    height          : 500px;*/
+}
+
+.span-2 {
+    background-color: aquamarine;
+    /*display       : inline POR DEFECTO en span
+    height          : 500px;*/
+    float           : left;
+}
+
+div {
+    border          : 1px solid gray;
+    padding         : 5px;
+    margin          : 3px;
+    background-color: white;
+
+}
+
+/*Posicionamiento relativo, en relación al original*/
+.relative {
+    position        : relative;
+    left            : 80px;
+    margin-left     : 10px;
+}
+
+/*Posicionamiento fijo, en relación a la pantalla*/
+.fixed-1 {
+    position        : fixed; 
+    top             : 200px;
+    background-color: yellow;
+    z-index         : 10; /* Por encima de 10 elementos*/
+}
+
+.fixed-2 {
+    position        : fixed; 
+    background-color: red;
+    z-index         : 10; /* Por encima de 10 elementos*/
+}
+
+/*Posicionamiento absouto, en relación al padre (head)*/
+.absolute {
+    position        : absolute;
+    top             : 100px;
+    bottom          : 150px;
+    right           : 100px;
+    left            : 100px;
+}
+
+.relative.contenedor {
+    width           : 300px;
+    height          : 300px;
+    background-color: blueviolet;
+}
+
+.sticky { /*pegajoso, al hacer scroll se queda*/
+    position        : sticky;
+    top             : 0px;
+    z-index         : 2;
+}

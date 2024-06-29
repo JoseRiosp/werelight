@@ -1,0 +1,15 @@
+.flex {
+    display         : flex;
+    background-color: cadetblue;
+    height          : 300px;
+    justify-content : space-around;
+    align-items     : center;
+}
+
+.contenido-1 {
+
+}
+
+.contenido-2{
+    
+}
