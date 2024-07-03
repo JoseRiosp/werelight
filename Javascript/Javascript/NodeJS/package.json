@@ -4,7 +4,9 @@
   "description": "This is my first project in Javascript with NodeJS ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "greet": "node helloworld.js"
+    
   },
   "repository": {
     "type": "git",
