@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cat Generator Gif</h1>
+    <button id="generate">Generate cat</button>
+    <br>
+    <img src="">
+    <script>
+        const button = document.getElementById("generate");
+        const img = document.querySelector("img");
+        async function getCat(){
+        const response= await fetch("https://api.giphy.com/v1/gifs/translate?api_key=crhlgW85MNpjpu0H09PasXaBaF8MjdVP&s=cats",{
+            mode: "cors"})
+        const catData= await response.json(); // Devolver la promesa de fetch en json
+            img.src= catData.data.images.original.url; //ponerla en el src del elemento img
+        }
+            
+            getCat().catch(function(error){
+                if(error=200){
+                    console.log("The gif is not found");
+                    img.src="https://media.tenor.com/1L8xQpkb71sAAAAM/crying.gif";
+                }
+                console.error("Error fetching data:", error);
+            });
+        
+            button.addEventListener("click", getCat);
+
+    </script>
+</body>
+
+</html>

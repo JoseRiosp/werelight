@@ -192,7 +192,7 @@ const new_ppl =new Persona("Elber", 25, true)
     
     class Developer extends Persona { //"extends" para heredar
         constructor(nombre, edad, language){
-            super(nombre,edad) //Super para usar el constructor del padre
+            super(nombre,edad) //Super para usar el primer constructor del padre
             this.language=language
 
         }
@@ -209,3 +209,76 @@ const new_ppl =new Persona("Elber", 25, true)
     //Interfaces => duck typing 
 
     //Typescript => Sí se pueden usar interfaces 
+
+    //Promesas:
+
+    var p = new Promise(function(resolve, reject) {
+	
+        // Do an async task async task and then...
+    
+        if(/* good condition */a) {
+            resolve('Success!');
+        }
+        else {
+            reject('Failure!');
+            //throw new Error("Error!")
+        }
+    });
+    
+    p.then(function(result) {  //Se ejecutan el "resolve" de la promesa
+        /* do something with the result */
+    }).catch(function(e) { // Se ejecuta el "reject" de la promesa
+        /* error :( */
+        //console.error(e) //Se ejecuta el Thrown New Error
+    }).finally(function() {
+       /* executes regardless or success for failure */ 
+    });
+
+    //Ejecutar con un setTimeOut
+
+    new Promise(function(resolve, reject) {
+        // A mock async action using setTimeout
+        setTimeout(function() { resolve(10); }, 3000); //3seg
+    })
+    .then(function(result) {
+        console.log(result);
+    })
+    
+    // From the console:
+    // 10
+
+    //Cadenas de .then:
+
+    .then(function(num) { console.log('first then: ', num); return num * 2; })
+.then(function(num) { console.log('second then: ', num); return num * 2; })
+.then(function(num) { console.log('last then: ', num);});
+
+// From the console:
+// first then:  10
+// second then:  20
+// last then:  40
+(new Promise((resolve, reject) => { reject("Nope"); }))
+    .then(() => { console.log("success") })
+    .catch(() => { console.log("fail") })
+    .finally(res => { console.log("finally") });
+
+// >> fail
+// >> finally
+//finally 
+
+downloadPhoto('http://coolcats.com/cat.gif', handlePhoto)
+
+function handlePhoto (error, photo) {
+  if (error)
+    console.error('Download error!', error)
+  else 
+  console.log('Download finished', photo)
+}
+
+console.log('Download started')
+
+
+let script = document.createElement('script'); // Crear un <script/> en el html
+//ponerle el atributo src=""
+script.src = `http://another.com/weather.json?callback=gotWeather`; //Llama el script weather.json y activa nuestra funcion "gotWeather" como respuesta
+document.body.append(script); //anexarlo al <body> del html
