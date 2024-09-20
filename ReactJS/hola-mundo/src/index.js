@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+//Añadimos bootstrap, arriba de css para que no lo pise
+import 'bootstrap/dist/css/bootstrap.css';
+
+//Importante: Los estilos propios deben it debajo del boostrap
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import TaskListComponent from './components/container/task_list';
+//import GreetingStyled from './components/pure/greetingStyled';
 //import GreetFun from  "./components/pure/greetFun.jsx";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
        {/*<Greeting name="Elber"></Greeting>*/}
        {/*<GreetFun name="Elber"></GreetFun>*/}
        <TaskListComponent></TaskListComponent>
+       {/*<GreetingStyled name="José"></GreetingStyled>*/}
       </header>
     </div>
   );
